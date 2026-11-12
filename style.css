@@ -1,0 +1,22 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #000; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; image-rendering: pixelated; }
+#gui { pointer-events: none; }
+/* touch controls */
+#touch { position: fixed; inset: 0; z-index: 2; touch-action: none; }
+#touch[hidden] { display: none; }
+.t-look { position: absolute; inset: 0; }
+.t-btn, .t-dpad { position: absolute; box-sizing: border-box; background: rgba(90, 90, 90, 0.35); border: 2px solid rgba(0, 0, 0, 0.55); box-shadow: inset 2px 2px rgba(255,255,255,0.25), inset -2px -2px rgba(0,0,0,0.3);
+  color: #fff; font: 15px/1 monospace; text-shadow: 2px 2px #3f3f3f; display: flex; align-items: center; justify-content: center; padding: 0; touch-action: none; }
+.t-btn.on, .t-dpad span.on { background: rgba(200, 200, 230, 0.35); }
+.t-back { left: calc(10px + env(safe-area-inset-left)); top: calc(10px + env(safe-area-inset-top)); width: 40px; height: 36px; }
+.t-inv { right: calc(10px + env(safe-area-inset-right)); top: calc(10px + env(safe-area-inset-top)); width: 46px; height: 46px; }
+.t-chat { left: calc(58px + env(safe-area-inset-left)); top: calc(10px + env(safe-area-inset-top)); width: 48px; height: 36px; font-size: 12px; }
+.t-craft { right: calc(62px + env(safe-area-inset-right)); top: calc(10px + env(safe-area-inset-top)); width: 56px; height: 46px; font-size: 12px; }
+.t-chat-input { position: fixed; z-index: 4; left: 8px; right: 8px; bottom: calc(10px + env(safe-area-inset-bottom)); box-sizing: border-box; height: 38px; padding: 4px 8px; border: 2px solid #888; border-radius: 0; outline: none; background: rgba(0,0,0,0.9); color: #fff; font: 16px monospace; touch-action: auto; }
+.t-dpad { left: calc(14px + env(safe-area-inset-left)); bottom: calc(14px + env(safe-area-inset-bottom)); width: 150px; height: 150px; display: block; }
+.t-dpad span { position: absolute; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.t-dpad .up { left: 50px; top: 0; } .t-dpad .down { left: 50px; bottom: 0; } .t-dpad .left { left: 0; top: 50px; } .t-dpad .right { right: 0; top: 50px; }
+.t-jump { right: calc(24px + env(safe-area-inset-right)); bottom: calc(60px + env(safe-area-inset-bottom)); width: 64px; height: 56px; }
+.t-attack { right: calc(28px + env(safe-area-inset-right)); bottom: calc(126px + env(safe-area-inset-bottom)); width: 58px; height: 50px; }
+.t-sneak { right: calc(96px + env(safe-area-inset-right)); bottom: calc(126px + env(safe-area-inset-bottom)); width: 58px; height: 50px; font-size: 11px; }
+.t-use { right: calc(96px + env(safe-area-inset-right)); bottom: calc(60px + env(safe-area-inset-bottom)); width: 58px; height: 50px; }
